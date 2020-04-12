@@ -41,47 +41,29 @@
     <div class="tools">
         <form>
             <div class="styleSet">
-                <label for="__h1{color:">Couleur du titre 1</label>
-                <input id="__h1{color:" type="color" name="__h1{color:" value="<?= $_GET['__h1{color:'] ?? '#000000' ?>">
-                <label>Font du titre 1</label>
-                <input type="file" name='f_@font-face{font-family:"myH1font";src:' >
-                <input type="hidden" name="h1Font"  value="<?= $_GET['f_@font-face{font-family:"myH1font";src:'] ?? ''  ?>">
-                <label>Taille du titre 1</label>
-                <input type="number" name="s_h1{font-size:" value="<?= $_GET['s_h1{font-size:'] ?? '70' ?>">
+                <?php setColorInput('h1{color:', 'Couleur du titre 1', '#000000') ?>
+                <?php setFontInput('@font-face{font-family:"myH1font";src:', 'Font du titre 1', '') ?>
+                <?php setSizeInput("h1{font-size:", 'Taille du titre 1', '70') ?>
             </div>
 
             <div class="styleSet">
-                <label>Couleur du titre 2</label>
-                <input type="color" name="__h2{color:" value="<?=$_GET['__h2{color:'] ?? '#000000' ?>">
-                <label>Font du titre 2</label>
-                <input type="file" name='f_@font-face{font-family:"myH2font";src:' >
-                <input type="hidden" name="h2Font" value="<?= $_GET['f_@font-face{font-family:"myH2font";src:'] ?? '' ?>">
-                <label>Taille du titre 2</label>
-                <input type="number" name="s_h2{font-size:" value="<?= $_GET['s_h2{font-size:'] ?? '16' ?>">
-                <label>Decalage horizontal H2</label>
-                <input type="range" name="r_h2{padding-left:" value="<?= $_GET['r_h2{padding-left:'] ?? '0' ?>">
+                <?php setColorInput('h2{color:', 'Couleur du titre 2', '#000000') ?>
+                <?php setFontInput('@font-face{font-family:"myH2font";src:', 'Font du titre 2', '') ?>
+                <?php setSizeInput("h2{font-size:", 'Taille du titre 2', '36') ?>
+                <?php setRangeInput("h2{padding-left:", 'Décalage Horizontal du titre 2', '36') ?>
             </div>
 
             <div class="styleSet">
-                <label>Couleur du titre 3</label>
-                <input type="color" name="__h3{color:" value="<?=$_GET['__h3{color:'] ?? '#000000' ?>">
-                <label>Font du titre 3</label>
-                <input type="file" name='f_@font-face{font-family:"myH3font";src:' >
-                <input type="hidden" name="h3Font" value="<?= $_GET['f_@font-face{font-family:"myH3font";src:'] ?? '' ?>">
-                <label>Taille du titre 3</label>
-                <input type="number" name="s_h3{font-size:" value="<?= $_GET['s_h3{font-size:'] ?? '16' ?>">
-                <label>Decalage horizontal H3</label>
-                <input type="range" name="r_h3{padding-left:" value="<?= $_GET['r_h3{padding-left:'] ?? '0' ?>">
+                <?php setColorInput('h3{color:', 'Couleur du titre 3', '#000000') ?>
+                <?php setFontInput('@font-face{font-family:"myH3font";src:', 'Font du titre 3', '') ?>
+                <?php setSizeInput("h3{font-size:", 'Taille du titre 3', '36') ?>
+                <?php setRangeInput("h3{padding-left:", 'Décalage Horizontal du titre 3', '36') ?>
             </div>
 
             <div class="styleSet">
-                <label>Couleur du paragraphe</label>
-                <input type="color" name="__p{color:" value="<?=$_GET['__p{color:'] ?? '#000000' ?>">
-                <label>Font du paragraphe</label>
-                <input type="file" name='f_@font-face{font-family:"myPfont";src:' >
-                <input type="hidden" name="pFont" value="<?= $_GET['f_@font-face{font-family:"myPfont";src:'] ?? '' ?>">
-                <label>Taille du paragraphe</label>
-                <input type="number" name="s_p{font-size:" value="<?= $_GET['s_p{font-size:'] ?? '16' ?>">
+                <?php setColorInput('p{color:', 'Couleur du paragraphe', '#000000') ?>
+                <?php setFontInput('@font-face{font-family:"myPfont";src:', 'Font du paragraphe', '') ?>
+                <?php setSizeInput("p{font-size:", 'Taille du paragraphe', '16') ?>
             </div>
 
             <label>Couleur du body</label>
