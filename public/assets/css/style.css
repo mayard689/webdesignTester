@@ -1,0 +1,44 @@
+*{
+    padding:0;
+    margin:0;
+
+}
+
+.content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.styleSet{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sectionContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: start;
+}
+
+.mydiv{
+    border:thin solid darkgrey;
+    width:25%;
+    height:25%;
+    box-shadow: darkgrey;
+    padding:20px;
+    margin:20px;
+    align-self: center;
+}
+

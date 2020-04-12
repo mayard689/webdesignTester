@@ -24,7 +24,7 @@
 <head>
     <meta charset="utf-8">
     <title> My Design tester </title>
-
+    <link rel="stylesheet" href="/assets/css/style.css">
     <style type="text/css">
 
 	    <?php foreach($_GET as $selector=>$value){
