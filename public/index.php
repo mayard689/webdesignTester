@@ -29,6 +29,7 @@
     <meta charset="utf-8">
     <title> My Design tester </title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/tools.css">
     <style type="text/css">
         <?php echo printCss()?>
     </style>
@@ -36,10 +37,9 @@
 </head>
 <body>
 
+    <input class="toolBoxActivator" type="checkbox"> Afficher la boite à outils. </input>
     <div class="tools">
         <form>
-            <button> Afficher la boite à outils. </button>
-
             <div class="styleSet">
                 <label for="__h1{color:">Couleur du titre 1</label>
                 <input id="__h1{color:" type="color" name="__h1{color:" value="<?= $_GET['__h1{color:'] ?? '#000000' ?>">

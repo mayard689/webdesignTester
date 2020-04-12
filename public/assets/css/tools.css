@@ -1,0 +1,23 @@
+.tools{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    height: 0px;
+}
+
+.toolBoxActivator:checked + .tools{
+    height: min-content;
+}
+
+form, .cssCode{
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.cssCode {
+    overflow-y: scroll;
+}
