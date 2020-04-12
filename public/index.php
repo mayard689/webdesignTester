@@ -114,6 +114,9 @@
             <label>Couleur de section2</label>
             <input type="color" name="___section2{background-color:" value="<?=$_GET['___section2{background-color:'] ?? '#FFFFFF' ?>">
 
+            <label>largeur de section</label>
+            <input type="range" name="r_section{width:" value="<?=$_GET['r_section{width:'] ?? '100' ?>">
+
             <input type="submit" value="tester">
         </form>
 
