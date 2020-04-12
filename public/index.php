@@ -117,6 +117,9 @@
             <label>largeur de section</label>
             <input type="range" name="r_section{width:" value="<?=$_GET['r_section{width:'] ?? '100' ?>">
 
+            <label>padding de section</label>
+            <input type="range" name="r__sectionContent{width:" value="<?=$_GET['r__sectionContent{width:'] ?? '100' ?>">
+
             <input type="submit" value="tester">
         </form>
 
