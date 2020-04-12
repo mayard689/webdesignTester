@@ -1,4 +1,8 @@
+
+
 <?php
+
+    require "../src/tools.php";
 
     if (empty($_GET['f_@font-face{font-family:"myH1font";src:']) && !empty($_GET['h1Font'])) {
         $_GET['f_@font-face{font-family:"myH1font";src:'] = $_GET['h1Font'];
@@ -26,38 +30,13 @@
     <title> My Design tester </title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <style type="text/css">
-
-	    <?php foreach($_GET as $selector=>$value){
-		    $selectorType=substr($selector,0,2);
-		    $selectorName=str_replace("_",".",substr($selector,2));
-		    if ($selectorType=='r_'){
-		        echo $selectorName.$value.'%;}'."\r" ;
-		    }elseif ($selectorType=='f_'){
-		        echo $selectorName.'url("./assets/font/'.$value.'");}'."\r" ;
-		    }elseif ($selectorType=='s_'){
-		        echo $selectorName.$value.'px;}'."\r" ;
-		    }else{
-		        echo $selectorName.$value.';}'."\r" ;
-		    }
-	    } ?>
-
-            h1{
-                font-family: myH1font;
-            }
-            h2{
-                font-family: myH2font;
-            }
-            h3{
-                font-family: myH3font;
-            }
-            p{
-                font-family: myPfont;
-            }
+        <?php echo printCss()?>
     </style>
 
 </head>
 <body>
 
+    <div class="tools">
         <form>
             <button> Afficher la boite à outils. </button>
 
@@ -122,6 +101,12 @@
 
             <input type="submit" value="tester">
         </form>
+
+        <div class="cssCode">
+            <?php echo str_replace("\r","<br>",printCss()); ?>
+        </div>
+
+    </div>
 
 
     <div class="content" >
