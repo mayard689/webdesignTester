@@ -1,3 +1,24 @@
+<?php
+
+    if (empty($_GET['f_@font-face{font-family:"myH1font";src:']) && !empty($_GET['h1Font'])) {
+        $_GET['f_@font-face{font-family:"myH1font";src:'] = $_GET['h1Font'];
+    }
+    if (empty($_GET['f_@font-face{font-family:"myH2font";src:']) && !empty($_GET['h1Font'])) {
+        $_GET['f_@font-face{font-family:"myH2font";src:'] = $_GET['h2Font'];
+    }
+    if (empty($_GET['f_@font-face{font-family:"myH3font";src:']) && !empty($_GET['h1Font'])) {
+        $_GET['f_@font-face{font-family:"myH3font";src:'] = $_GET['h3Font'];
+    }
+    if (empty($_GET['f_@font-face{font-family:"myPfont";src:']) && !empty($_GET['h1Font'])) {
+        $_GET['f_@font-face{font-family:"myPfont";src:'] = $_GET['pFont'];
+    }
+
+    unset($_GET['h1Font']);
+    unset($_GET['h2Font']);
+    unset($_GET['h3Font']);
+    unset($_GET['pFont']);
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,8 +30,25 @@
 	    <?php foreach($_GET as $selector=>$value){
 		    $selectorType=substr($selector,0,2);
 		    $selectorName=str_replace("_",".",substr($selector,2));
-	            echo $selectorName.$value.';}'."\r" ;
+		    if ($selectorType=='f_'){
+		        echo $selectorName.'url("./assets/font/'.$value.'");}'."\r" ;
+		    }else{
+		        echo $selectorName.$value.';}'."\r" ;
+		    }
 	    } ?>
+
+            h1{
+                font-family: myH1font;
+            }
+            h2{
+                font-family: myH2font;
+            }
+            h3{
+                font-family: myH3font;
+            }
+            p{
+                font-family: myPfont;
+            }
     </style>
 
 </head>
@@ -22,27 +60,40 @@
             <div class="styleSet">
                 <label for="__h1{color:">Couleur du titre 1</label>
                 <input id="__h1{color:" type="color" name="__h1{color:" value="<?= $_GET['__h1{color:'] ?? '#000000' ?>">
+                <label>Font du titre 1</label>
+                <input type="file" name='f_@font-face{font-family:"myH1font";src:' >
+                <input type="hidden" name="h1Font"  value="<?= $_GET['f_@font-face{font-family:"myH1font";src:'] ?? ''  ?>">
             </div>
 
             <div class="styleSet">
                 <label>Couleur du titre 2</label>
                 <input type="color" name="__h2{color:" value="<?=$_GET['__h2{color:'] ?? '#000000' ?>">
+                <label>Font du titre 2</label>
+                <input type="file" name='f_@font-face{font-family:"myH2font";src:' >
+                <input type="hidden" name="h2Font" value="<?= $_GET['f_@font-face{font-family:"myH2font";src:'] ?? '' ?>">
             </div>
 
             <div class="styleSet">
                 <label>Couleur du titre 3</label>
                 <input type="color" name="__h3{color:" value="<?=$_GET['__h3{color:'] ?? '#000000' ?>">
+                <label>Font du titre 3</label>
+                <input type="file" name='f_@font-face{font-family:"myH3font";src:' >
+                <input type="hidden" name="h3Font" value="<?= $_GET['f_@font-face{font-family:"myH3font";src:'] ?? '' ?>">
             </div>
 
             <div class="styleSet">
                 <label>Couleur du paragraphe</label>
                 <input type="color" name="__p{color:" value="<?=$_GET['__p{color:'] ?? '#000000' ?>">
+                <label>Font du paragraphe</label>
+                <input type="file" name='f_@font-face{font-family:"myPfont";src:' >
+                <input type="hidden" name="pFont" value="<?= $_GET['f_@font-face{font-family:"myPfont";src:'] ?? '' ?>">
+
             </div>
 
             <label>Couleur du body</label>
             <input type="color" name="___content{background-color:" value="<?=$_GET['___content{background-color:']??'#FFFFFF' ?>">
-            
-	    <label>Couleur de section 1</label>
+
+            <label>Couleur de section 1</label>
             <input type="color" name="___section1{background-color:" value="<?=$_GET['___section1{background-color:'] ?? '#FFFFFF' ?>">
 
             <label>Couleur de section2</label>
