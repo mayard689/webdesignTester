@@ -30,11 +30,13 @@
 	    <?php foreach($_GET as $selector=>$value){
 		    $selectorType=substr($selector,0,2);
 		    $selectorName=str_replace("_",".",substr($selector,2));
-		    if ($selectorType=='f_'){
+		    if ($selectorType=='r_'){
+		        echo $selectorName.$value.'%;}'."\r" ;
+		    }elseif ($selectorType=='f_'){
 		        echo $selectorName.'url("./assets/font/'.$value.'");}'."\r" ;
 		    }elseif ($selectorType=='s_'){
-                        echo $selectorName.$value.'px;}'."\r" ;
-                    }else{
+		        echo $selectorName.$value.'px;}'."\r" ;
+		    }else{
 		        echo $selectorName.$value.';}'."\r" ;
 		    }
 	    } ?>
@@ -77,6 +79,8 @@
                 <input type="hidden" name="h2Font" value="<?= $_GET['f_@font-face{font-family:"myH2font";src:'] ?? '' ?>">
                 <label>Taille du titre 2</label>
                 <input type="number" name="s_h2{font-size:" value="<?= $_GET['s_h2{font-size:'] ?? '16' ?>">
+                <label>Decalage horizontal H2</label>
+                <input type="range" name="r_h2{padding-left:" value="<?= $_GET['r_h2{padding-left:'] ?? '0' ?>">
             </div>
 
             <div class="styleSet">
@@ -87,6 +91,8 @@
                 <input type="hidden" name="h3Font" value="<?= $_GET['f_@font-face{font-family:"myH3font";src:'] ?? '' ?>">
                 <label>Taille du titre 3</label>
                 <input type="number" name="s_h3{font-size:" value="<?= $_GET['s_h3{font-size:'] ?? '16' ?>">
+                <label>Decalage horizontal H3</label>
+                <input type="range" name="r_h3{padding-left:" value="<?= $_GET['r_h3{padding-left:'] ?? '0' ?>">
             </div>
 
             <div class="styleSet">
@@ -109,7 +115,6 @@
             <input type="color" name="___section2{background-color:" value="<?=$_GET['___section2{background-color:'] ?? '#FFFFFF' ?>">
 
             <input type="submit" value="tester">
-
         </form>
 
 
