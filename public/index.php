@@ -3,8 +3,30 @@
 <head>
     <meta charset="utf-8">
     <title> My Design tester </title>
+
+    <style type="text/css">
+
+	    <?php foreach($_GET as $selector=>$value){
+		    $selectorType=substr($selector,0,2);
+		    $selectorName=str_replace("_",".",substr($selector,2));
+	            echo $selectorName.$value.';}'."\r" ;
+	    } ?>
+    </style>
+
 </head>
 <body>
+
+        <form>
+            <button> Afficher la boite à outils. </button>
+
+            <div class="styleSet">
+                <label for="__h1{color:">Couleur du titre 1</label>
+                <input id="__h1{color:" type="color" name="__h1{color:" value="<?= $_GET['__h1{color:'] ?? '#000000' ?>">
+            </div>
+
+            <input type="submit" value="tester">
+
+        </form>
 
     <div class="content" >
 
