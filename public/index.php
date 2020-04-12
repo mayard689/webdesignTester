@@ -32,7 +32,9 @@
 		    $selectorName=str_replace("_",".",substr($selector,2));
 		    if ($selectorType=='f_'){
 		        echo $selectorName.'url("./assets/font/'.$value.'");}'."\r" ;
-		    }else{
+		    }elseif ($selectorType=='s_'){
+                        echo $selectorName.$value.'px;}'."\r" ;
+                    }else{
 		        echo $selectorName.$value.';}'."\r" ;
 		    }
 	    } ?>
@@ -63,6 +65,8 @@
                 <label>Font du titre 1</label>
                 <input type="file" name='f_@font-face{font-family:"myH1font";src:' >
                 <input type="hidden" name="h1Font"  value="<?= $_GET['f_@font-face{font-family:"myH1font";src:'] ?? ''  ?>">
+                <label>Taille du titre 1</label>
+                <input type="number" name="s_h1{font-size:" value="<?= $_GET['s_h1{font-size:'] ?? '70' ?>">
             </div>
 
             <div class="styleSet">
@@ -71,6 +75,8 @@
                 <label>Font du titre 2</label>
                 <input type="file" name='f_@font-face{font-family:"myH2font";src:' >
                 <input type="hidden" name="h2Font" value="<?= $_GET['f_@font-face{font-family:"myH2font";src:'] ?? '' ?>">
+                <label>Taille du titre 2</label>
+                <input type="number" name="s_h2{font-size:" value="<?= $_GET['s_h2{font-size:'] ?? '16' ?>">
             </div>
 
             <div class="styleSet">
@@ -79,6 +85,8 @@
                 <label>Font du titre 3</label>
                 <input type="file" name='f_@font-face{font-family:"myH3font";src:' >
                 <input type="hidden" name="h3Font" value="<?= $_GET['f_@font-face{font-family:"myH3font";src:'] ?? '' ?>">
+                <label>Taille du titre 3</label>
+                <input type="number" name="s_h3{font-size:" value="<?= $_GET['s_h3{font-size:'] ?? '16' ?>">
             </div>
 
             <div class="styleSet">
@@ -87,7 +95,8 @@
                 <label>Font du paragraphe</label>
                 <input type="file" name='f_@font-face{font-family:"myPfont";src:' >
                 <input type="hidden" name="pFont" value="<?= $_GET['f_@font-face{font-family:"myPfont";src:'] ?? '' ?>">
-
+                <label>Taille du paragraphe</label>
+                <input type="number" name="s_p{font-size:" value="<?= $_GET['s_p{font-size:'] ?? '16' ?>">
             </div>
 
             <label>Couleur du body</label>
