@@ -1,13 +1,16 @@
 .tools{
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
+}
+
+.toolBox{
     height: 0px;
 }
 
-.toolBoxActivator:checked + .tools{
+.toolBoxActivator:checked + .toolBox{
     height: min-content;
 }
 
@@ -18,6 +21,6 @@ form, .cssCode{
     align-items: center;
 }
 
-.cssCode {
+.cssCode, form {
     overflow-y: scroll;
 }

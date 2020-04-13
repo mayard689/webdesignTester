@@ -37,9 +37,12 @@
 </head>
 <body>
 
-    <input class="toolBoxActivator" type="checkbox"> Afficher la boite à outils. </input>
+
     <div class="tools">
-        <form>
+
+
+        <input class="toolBoxActivator" type="checkbox"> Afficher les options graphique. </input>
+        <form class="toolBox">
             <div class="styleSet">
                 <?php setColorInput('h1{color:', 'Couleur du titre 1', '#000000') ?>
                 <?php setFontInput('@font-face{font-family:"myH1font";src:', 'Font du titre 1', '') ?>
@@ -108,7 +111,8 @@
             <input type="submit" value="tester">
         </form>
 
-        <div class="cssCode">
+        <input class="toolBoxActivator" type="checkbox"> Afficher le css. </input>
+        <div class="cssCode toolBox">
             <?php echo str_replace("\r","<br>",printCss()); ?>
         </div>
 
