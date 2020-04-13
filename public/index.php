@@ -41,6 +41,15 @@
     <div class="tools">
 
 
+        <input class="toolBoxActivator" type="checkbox"> Afficher la palette. </input>
+        <div class="palette toolBox">
+            <?php setColorInput(':root{--color1:', 'Couleur 1', '#000000') ?>
+            <?php setColorInput(':root{--color2:', 'Couleur 2', '#444444') ?>
+            <?php setColorInput(':root{--color3:', 'Couleur 3', '#888888') ?>
+            <?php setColorInput(':root{--color4:', 'Couleur 4', '#CCCCCC') ?>
+            <?php setColorInput(':root{--color5:', 'Couleur 5', '#FFFFFF') ?>
+        </div>
+
         <input class="toolBoxActivator" type="checkbox"> Afficher les options graphique. </input>
         <form class="toolBox">
             <div class="styleSet">
