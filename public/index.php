@@ -146,20 +146,16 @@
     <div class="content" >
 
 
-        <h1>CECI EST UN TITRE H1</h1>
+        <?php include 'h1Title.php'?>
 
         <section class="section1">
             <div class="sectionContent">
                 <?php include 'h2Title.php'?>
                 <?php include 'h3Title.php'?>
-                <p>Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <?php include 'pParagraphe.php'?>
 
                 <div class ="myDivPanel">
-                    <div class="myDiv">
-                        <h3 class="myDivH3">Ceci est un titre de niveau 3</h3>
-                        <p class="myDivP">Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <div class="myDivImg myDivImg1" ></div>
-                    </div>
+                    <?php include 'dDiv.php'?>
 
                     <div class="myDiv">
                         <h3 class="myDivH3">Ceci est un titre de niveau 3</h3>
@@ -174,7 +170,7 @@
             <div class="sectionContent">
                 <?php include 'h2Title.php'?>
                 <?php include 'h3Title.php'?>
-                <p>Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <?php include 'pParagraphe.php'?>
 
                 <div class ="myDivPanel">
                     <div class="myDiv">

@@ -66,10 +66,17 @@ select, option{
     display:flex;
     flex-direction: row;
     align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.settingBlock p{
+    width:100%;
 }
 
 .settingBlock > label{
     font-size:10px;
+    color:grey;
 }
 
 .formStyleSet{
@@ -115,10 +122,3 @@ select, option{
     width:100px;
 }
 
-_.modifierSelector{
-    font-size:10px;
-    font-color:grey;
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-}
