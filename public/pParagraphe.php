@@ -7,11 +7,19 @@
     <label for="h2Activator">modifier</label>
     <input id="h2Activator" type="checkbox" class="styleSetActivator" type="checkbox" >
 
+
     <div class="formStyleSet">
+        <form>
+
+        <div style="display:none;"><?php include 'globalForm.php' ?></div>
+
         <?php chooseColorInput('p{color:', 'Couleur du paragraphe', '#000000') ?>
         <?php setFontInput('@font-face{font-family:"myPfont";src:', 'Font du paragraphe', '') ?>
         <?php setSizeInput("p{font-size:", 'Taille du paragraphe', '16') ?>
         <input type="submit" value="Ok">
+
+        </form>
     </div>
+
 
 </div>

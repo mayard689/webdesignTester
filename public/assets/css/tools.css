@@ -82,6 +82,8 @@ select, option{
 .formStyleSet{
     position:fixed;
     top:100px;
+    height:calc(100vh - 200px);
+    overflow: scroll;
     left:5%;
     visibility: hidden;
     background:lightgrey;
