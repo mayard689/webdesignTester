@@ -1,3 +1,11 @@
+:root{
+    --color1:#000000;
+    --color2:#444444;
+    --color3:#888888;
+    --color4:#CCCCCC;
+    --color5:#FFFFFF;
+}
+
 .tools{
     display:flex;
     flex-direction: column;
@@ -20,5 +28,35 @@ form, .cssCode{
     flex-direction: column;
     justify-content: start;
     align-items: center;
+}
+
+select, option{
+    background: transparent;
+}
+
+.colorSample{
+    width:10px;
+    height:10px;
+}
+
+.colorSample1{
+    background:var(--color1);
+    color:var(--color1);
+}
+.colorSample2{
+    background-color:var(--color2);
+    color:var(--color2);
+}
+.colorSample3{
+    background-color:var(--color3);
+    color:var(--color3);
+}
+.colorSample4{
+    background-color:var(--color4);
+    color:var(--color4);
+}
+.colorSample5{
+    background-color:var(--color5);
+    color:var(--color5);
 }
 

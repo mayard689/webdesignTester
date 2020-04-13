@@ -40,84 +40,85 @@
 
     <div class="tools">
 
+        <form>
 
-        <input class="toolBoxActivator" type="checkbox"> Afficher la palette. </input>
-        <div class="palette toolBox">
-            <?php setColorInput(':root{--color1:', 'Couleur 1', '#000000') ?>
-            <?php setColorInput(':root{--color2:', 'Couleur 2', '#444444') ?>
-            <?php setColorInput(':root{--color3:', 'Couleur 3', '#888888') ?>
-            <?php setColorInput(':root{--color4:', 'Couleur 4', '#CCCCCC') ?>
-            <?php setColorInput(':root{--color5:', 'Couleur 5', '#FFFFFF') ?>
-        </div>
+            <input class="toolBoxActivator" type="checkbox"> Afficher la palette. </input>
+            <div class="palette toolBox">
+                <?php setColorInput(':root{--color1:', 'Couleur 1', '#000000') ?>
+                <?php setColorInput(':root{--color2:', 'Couleur 2', '#444444') ?>
+                <?php setColorInput(':root{--color3:', 'Couleur 3', '#888888') ?>
+                <?php setColorInput(':root{--color4:', 'Couleur 4', '#CCCCCC') ?>
+                <?php setColorInput(':root{--color5:', 'Couleur 5', '#FFFFFF') ?>
 
-        <input class="toolBoxActivator" type="checkbox"> Afficher les options graphique. </input>
-        <form class="toolBox">
-            <div class="styleSet">
-                <?php setColorInput('h1{color:', 'Couleur du titre 1', '#000000') ?>
-                <?php setFontInput('@font-face{font-family:"myH1font";src:', 'Font du titre 1', '') ?>
-                <?php setSizeInput("h1{font-size:", 'Taille du titre 1', '70') ?>
+                <input type="submit" value="Validerla palette">
             </div>
 
-            <div class="styleSet">
-                <?php setColorInput('h2{color:', 'Couleur du titre 2', '#000000') ?>
-                <?php setFontInput('@font-face{font-family:"myH2font";src:', 'Font du titre 2', '') ?>
-                <?php setSizeInput("h2{font-size:", 'Taille du titre 2', '36') ?>
-                <?php setRangeInput("h2{padding-left:", 'Décalage Horizontal du titre 2', '36') ?>
+            <input class="toolBoxActivator" type="checkbox"> Afficher les options graphique. </input>
+            <div class="settings toolBox">
+                <div class="styleSet">
+                    <?php chooseColorInput('h1{color:', 'Couleur du titre 1', '#000000') ?>
+                    <?php setFontInput('@font-face{font-family:"myH1font";src:', 'Font du titre 1', '') ?>
+                    <?php setSizeInput("h1{font-size:", 'Taille du titre 1', '70') ?>
+                </div>
+
+                <div class="styleSet">
+                    <?php chooseColorInput('h2{color:', 'Couleur du titre 2', '#000000') ?>
+                    <?php setFontInput('@font-face{font-family:"myH2font";src:', 'Font du titre 2', '') ?>
+                    <?php setSizeInput("h2{font-size:", 'Taille du titre 2', '36') ?>
+                    <?php setRangeInput("h2{padding-left:", 'Décalage Horizontal du titre 2', '36') ?>
+                </div>
+
+                <div class="styleSet">
+                    <?php chooseColorInput('h3{color:', 'Couleur du titre 3', '#000000') ?>
+                    <?php setFontInput('@font-face{font-family:"myH3font";src:', 'Font du titre 3', '') ?>
+                    <?php setSizeInput("h3{font-size:", 'Taille du titre 3', '36') ?>
+                    <?php setRangeInput("h3{padding-left:", 'Décalage Horizontal du titre 3', '36') ?>
+                </div>
+
+                <div class="styleSet">
+                    <?php chooseColorInput('p{color:', 'Couleur du paragraphe', '#000000') ?>
+                    <?php setFontInput('@font-face{font-family:"myPfont";src:', 'Font du paragraphe', '') ?>
+                    <?php setSizeInput("p{font-size:", 'Taille du paragraphe', '16') ?>
+                </div>
+
+                <div class="styleSet">
+                    <?php setSizeInput("_myDiv{width:", 'Largeur des vignettes', '100') ?>
+                    <?php setSizeInput("_myDiv{height:", 'Hauteur des vignettes', '100') ?>
+                </div>
+
+                <div class="styleSet">
+                    <?php setSizeInput("_myDivImg{width:", 'Largeur des images', '100') ?>
+                    <?php setSizeInput("_myDivImg{height:", 'Hauteur des images', '100') ?>
+                    <?php setSizeInput("_myDivImg{top:", 'Décalage Vertical des images', '0') ?>
+                    <?php setSizeInput("_myDivImg{left:", 'Decalage horizontal des images', '0') ?>
+                </div>
+
+                <div class="styleSet">
+                    <?php setSizeInput("_myDivH3{top:", 'Décalage Vertical des titres', '0') ?>
+                    <?php setSizeInput("_myDivH3{left:", 'Decalage horizontal des titres', '0') ?>
+                </div>
+
+                <div class="styleSet">
+                    <?php setSizeInput("_myDivP{top:", 'Décalage Vertical des paragraphes', '0') ?>
+                    <?php setSizeInput("_myDivP{left:", 'Decalage horizontal des paragraphes', '0') ?>
+                </div>
+
+
+                <?php chooseColorInput('_content{background-color:', 'Couleur du body', '#FFFFFF') ?>
+                <?php chooseColorInput('_section1{background-color:', 'Couleur de section 1', '#FFFFFF') ?>
+                <?php chooseColorInput('_section2{background-color:', 'Couleur de section 2', '#FFFFFF') ?>
+
+                <label>largeur de section</label>
+                <input type="range" name="r_section{width:" value="<?=$_GET['r_section{width:'] ?? '100' ?>">
+
+                <label>padding de section</label>
+                <input type="range" name="r__sectionContent{width:" value="<?=$_GET['r__sectionContent{width:'] ?? '100' ?>">
+
+                <input type="submit" value="Valider les choix">
+
             </div>
 
-            <div class="styleSet">
-                <?php setColorInput('h3{color:', 'Couleur du titre 3', '#000000') ?>
-                <?php setFontInput('@font-face{font-family:"myH3font";src:', 'Font du titre 3', '') ?>
-                <?php setSizeInput("h3{font-size:", 'Taille du titre 3', '36') ?>
-                <?php setRangeInput("h3{padding-left:", 'Décalage Horizontal du titre 3', '36') ?>
-            </div>
 
-            <div class="styleSet">
-                <?php setColorInput('p{color:', 'Couleur du paragraphe', '#000000') ?>
-                <?php setFontInput('@font-face{font-family:"myPfont";src:', 'Font du paragraphe', '') ?>
-                <?php setSizeInput("p{font-size:", 'Taille du paragraphe', '16') ?>
-            </div>
-
-            <div class="styleSet">
-                <?php setSizeInput("_myDiv{width:", 'Largeur des vignettes', '100') ?>
-                <?php setSizeInput("_myDiv{height:", 'Hauteur des vignettes', '100') ?>
-            </div>
-
-            <div class="styleSet">
-                <?php setSizeInput("_myDivImg{width:", 'Largeur des images', '100') ?>
-                <?php setSizeInput("_myDivImg{height:", 'Hauteur des images', '100') ?>
-                <?php setSizeInput("_myDivImg{top:", 'Décalage Vertical des images', '0') ?>
-                <?php setSizeInput("_myDivImg{left:", 'Decalage horizontal des images', '0') ?>
-            </div>
-
-            <div class="styleSet">
-                <?php setSizeInput("_myDivH3{top:", 'Décalage Vertical des titres', '0') ?>
-                <?php setSizeInput("_myDivH3{left:", 'Decalage horizontal des titres', '0') ?>
-            </div>
-
-            <div class="styleSet">
-                <?php setSizeInput("_myDivP{top:", 'Décalage Vertical des paragraphes', '0') ?>
-                <?php setSizeInput("_myDivP{left:", 'Decalage horizontal des paragraphes', '0') ?>
-            </div>
-
-
-
-            <label>Couleur du body</label>
-            <input type="color" name="___content{background-color:" value="<?=$_GET['___content{background-color:']??'#FFFFFF' ?>">
-
-            <label>Couleur de section 1</label>
-            <input type="color" name="___section1{background-color:" value="<?=$_GET['___section1{background-color:'] ?? '#FFFFFF' ?>">
-
-            <label>Couleur de section2</label>
-            <input type="color" name="___section2{background-color:" value="<?=$_GET['___section2{background-color:'] ?? '#FFFFFF' ?>">
-
-            <label>largeur de section</label>
-            <input type="range" name="r_section{width:" value="<?=$_GET['r_section{width:'] ?? '100' ?>">
-
-            <label>padding de section</label>
-            <input type="range" name="r__sectionContent{width:" value="<?=$_GET['r__sectionContent{width:'] ?? '100' ?>">
-
-            <input type="submit" value="tester">
         </form>
 
         <input class="toolBoxActivator" type="checkbox"> Afficher le css. </input>
