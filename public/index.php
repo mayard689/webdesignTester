@@ -58,7 +58,6 @@
                 <?php setFontInput('@font-face{font-family:"myH3font";src:', 'Font du titre 3', '') ?>
                 <?php setSizeInput("h3{font-size:", 'Taille du titre 3', '36') ?>
                 <?php setRangeInput("h3{padding-left:", 'Décalage Horizontal du titre 3', '36') ?>
-                <?php setSizeInput("h3{top:", 'Décalage Vertical du titre 3', '0') ?>
             </div>
 
             <div class="styleSet">
@@ -71,6 +70,25 @@
                 <?php setSizeInput("_myDiv{width:", 'Largeur des vignettes', '100') ?>
                 <?php setSizeInput("_myDiv{height:", 'Hauteur des vignettes', '100') ?>
             </div>
+
+            <div class="styleSet">
+                <?php setSizeInput("_myDivImg{width:", 'Largeur des images', '100') ?>
+                <?php setSizeInput("_myDivImg{height:", 'Hauteur des images', '100') ?>
+                <?php setSizeInput("_myDivImg{top:", 'Décalage Vertical des images', '0') ?>
+                <?php setSizeInput("_myDivImg{left:", 'Decalage horizontal des images', '0') ?>
+            </div>
+
+            <div class="styleSet">
+                <?php setSizeInput("_myDivH3{top:", 'Décalage Vertical des titres', '0') ?>
+                <?php setSizeInput("_myDivH3{left:", 'Decalage horizontal des titres', '0') ?>
+            </div>
+
+            <div class="styleSet">
+                <?php setSizeInput("_myDivP{top:", 'Décalage Vertical des paragraphes', '0') ?>
+                <?php setSizeInput("_myDivP{left:", 'Decalage horizontal des paragraphes', '0') ?>
+            </div>
+
+
 
             <label>Couleur du body</label>
             <input type="color" name="___content{background-color:" value="<?=$_GET['___content{background-color:']??'#FFFFFF' ?>">
@@ -110,15 +128,15 @@
 
                 <div class ="myDivPanel">
                     <div class="myDiv">
-                        <h3>Ceci est un titre de niveau 3</h3>
-                        <p>Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <img class=myImage" src="/assets/pictures/peur.jpeg" alt="votre image ici" title="image de test">
+                        <h3 class="myDivH3">Ceci est un titre de niveau 3</h3>
+                        <p class="myDivP">Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <img class="myDivImg" src="/assets/pictures/peur.jpeg" alt="votre image ici" title="image de test">
                     </div>
 
                     <div class="myDiv">
-                        <h3>Ceci est un titre de niveau 3</h3>
-                        <p>Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <img class=myImage" src="/assets/pictures/peur.jpeg" alt="votre image ici" title="image de test">
+                        <h3 class="myDivH3">Ceci est un titre de niveau 3</h3>
+                        <p class="myDivP">Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <img class="myDivImg" src="/assets/pictures/peur.jpeg" alt="votre image ici" title="image de test">
                     </div>
                 </div>
             </div>
@@ -132,15 +150,15 @@
 
                 <div class ="myDivPanel">
                     <div class="myDiv">
-                        <h3>Ceci est un titre de niveau 3</h3>
-                        <p>Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <img class=myImage" src="/assets/pictures/peur.jpeg" alt="votre image ici" title="image de test">
+                        <h3 class="myDivH3">Ceci est un titre de niveau 3</h3>
+                        <p class="myDivP">Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <img class="myDivImg" src="/assets/pictures/peur.jpeg" alt="votre image ici" title="image de test">
                     </div>
 
                     <div class="myDiv">
-                        <h3>Ceci est un titre de niveau 3</h3>
-                        <p>Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <img class=myImage" src="/assets/pictures/peur.jpeg" alt="votre image ici" title="image de test">
+                        <h3 class="myDivH3">Ceci est un titre de niveau 3</h3>
+                        <p class="myDivP">Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <img class="myDivImg" src="/assets/pictures/peur.jpeg" alt="votre image ici" title="image de test">
                     </div>
                 </div>
             </div>

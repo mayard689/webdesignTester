@@ -42,6 +42,10 @@ section{
     align-self: center;
 }
 
+.myDivH3, .myDivImg, .myDivH3{
+    position:relative;
+}
+
 .myDivPanel{
     display:flex;
     flex-direction: row;
@@ -49,7 +53,5 @@ section{
     align-items: center;
 }
 
-h3{
-    position:relative;
-}
+
 
