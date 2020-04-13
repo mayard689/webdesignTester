@@ -58,6 +58,7 @@
                 <?php setFontInput('@font-face{font-family:"myH3font";src:', 'Font du titre 3', '') ?>
                 <?php setSizeInput("h3{font-size:", 'Taille du titre 3', '36') ?>
                 <?php setRangeInput("h3{padding-left:", 'Décalage Horizontal du titre 3', '36') ?>
+                <?php setSizeInput("h3{top:", 'Décalage Vertical du titre 3', '0') ?>
             </div>
 
             <div class="styleSet">
@@ -65,7 +66,7 @@
                 <?php setFontInput('@font-face{font-family:"myPfont";src:', 'Font du paragraphe', '') ?>
                 <?php setSizeInput("p{font-size:", 'Taille du paragraphe', '16') ?>
             </div>
-
+            
             <label>Couleur du body</label>
             <input type="color" name="___content{background-color:" value="<?=$_GET['___content{background-color:']??'#FFFFFF' ?>">
 
