@@ -40,8 +40,12 @@ function setColorInput(string $name, string $label, string $default) : void
 
 function chooseColorInput(string $name, string $label, string $default) : void
 {
-    $name="__".$name;?>
+    $name="__".$name;
 
+    if (empty($_GET[$name])) {
+        $_GET[$name]='';
+    }?>
+    
     <label for="<?= $name ?>"><?=$label?></label>
     <select STYLE="width:150px" name='<?= $name ?>'>
         <option class="colorSample1" value="var(--color1)" <?= "var(--color1)"==$_GET[$name]?'selected':'' ?> > couleur 1 </option>;

@@ -84,6 +84,7 @@
                 <div class="styleSet">
                     <?php setSizeInput("_myDiv{width:", 'Largeur des vignettes', '100') ?>
                     <?php setSizeInput("_myDiv{height:", 'Hauteur des vignettes', '100') ?>
+                    <?php chooseColorInput('_myDiv{background:', 'Couleur de fond', '#FFFFFF') ?>
                 </div>
 
                 <div class="styleSet">
