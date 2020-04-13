@@ -19,6 +19,10 @@
     overflow-y: scroll;
 }
 
+.palette, .backgnd{
+    display:flex;
+}
+
 .toolBoxActivator:checked + .toolBox{
     height: min-content;
 }
