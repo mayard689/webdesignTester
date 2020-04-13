@@ -44,11 +44,11 @@
 
             <input class="toolBoxActivator" type="checkbox"> Afficher la palette. </input>
             <div class="palette toolBox">
-                <?php setColorInput(':root{--color1:', 'Couleur 1', '#000000') ?>
-                <?php setColorInput(':root{--color2:', 'Couleur 2', '#444444') ?>
-                <?php setColorInput(':root{--color3:', 'Couleur 3', '#888888') ?>
-                <?php setColorInput(':root{--color4:', 'Couleur 4', '#CCCCCC') ?>
-                <?php setColorInput(':root{--color5:', 'Couleur 5', '#FFFFFF') ?>
+                <?php setColorInput(':root{--c1:', 'Couleur 1', '#000000') ?>
+                <?php setColorInput(':root{--c2:', 'Couleur 2', '#444444') ?>
+                <?php setColorInput(':root{--c3:', 'Couleur 3', '#888888') ?>
+                <?php setColorInput(':root{--c4:', 'Couleur 4', '#CCCCCC') ?>
+                <?php setColorInput(':root{--c5:', 'Couleur 5', '#FFFFFF') ?>
 
                 <input type="submit" value="Validerla palette">
             </div>
@@ -92,6 +92,8 @@
                     <?php setSizeInput("_myDivImg{height:", 'Hauteur des images', '100') ?>
                     <?php setSizeInput("_myDivImg{top:", 'Décalage Vertical des images', '0') ?>
                     <?php setSizeInput("_myDivImg{left:", 'Decalage horizontal des images', '0') ?>
+                    <?php setPictureInput('_myDivImg1{background:', 'Image de fond', '') ?>
+                    <?php setPictureInput('_myDivImg2{background:', 'Image de fond', '') ?>
                 </div>
 
                 <div class="styleSet">
@@ -145,13 +147,13 @@
                     <div class="myDiv">
                         <h3 class="myDivH3">Ceci est un titre de niveau 3</h3>
                         <p class="myDivP">Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <img class="myDivImg" src="/assets/pictures/peur.jpeg" alt="votre image ici" title="image de test">
+                        <div class="myDivImg myDivImg1" ></div>
                     </div>
 
                     <div class="myDiv">
                         <h3 class="myDivH3">Ceci est un titre de niveau 3</h3>
                         <p class="myDivP">Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <img class="myDivImg" src="/assets/pictures/peur.jpeg" alt="votre image ici" title="image de test">
+                        <div class="myDivImg myDivImg2" ></div>
                     </div>
                 </div>
             </div>
@@ -167,13 +169,13 @@
                     <div class="myDiv">
                         <h3 class="myDivH3">Ceci est un titre de niveau 3</h3>
                         <p class="myDivP">Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <img class="myDivImg" src="/assets/pictures/peur.jpeg" alt="votre image ici" title="image de test">
+                        <div class="myDivImg myDivImg1" ></div>
                     </div>
 
                     <div class="myDiv">
                         <h3 class="myDivH3">Ceci est un titre de niveau 3</h3>
                         <p class="myDivP">Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <img class="myDivImg" src="/assets/pictures/peur.jpeg" alt="votre image ici" title="image de test">
+                        <div class="myDivImg myDivImg2" ></div>
                     </div>
                 </div>
             </div>

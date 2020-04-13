@@ -12,6 +12,8 @@
                 $code.= $selectorName.'url("./assets/font/'.$value.'");}'."\r" ;
             }elseif ($selectorType=='s_'){
                 $code.= $selectorName.$value.'px;}'."\r" ;
+            }elseif ($selectorType=='p_'){
+                $code.= $selectorName.'no-repeat center/100% url("./assets/pictures/'.$value.'");}'."\r" ;
             }else{
                 $code.= $selectorName.$value.';}'."\r" ;
             }
@@ -45,18 +47,15 @@ function chooseColorInput(string $name, string $label, string $default) : void
     if (empty($_GET[$name])) {
         $_GET[$name]='';
     }?>
-    
+
     <label for="<?= $name ?>"><?=$label?></label>
     <select STYLE="width:150px" name='<?= $name ?>'>
-        <option class="colorSample1" value="var(--color1)" <?= "var(--color1)"==$_GET[$name]?'selected':'' ?> > couleur 1 </option>;
-        <option class="colorSample2" value="var(--color2)" <?= "var(--color2)"==$_GET[$name]?'selected':'' ?> > couleur 2</option>;
-        <option class="colorSample3" value="var(--color3)" <?= "var(--color3)"==$_GET[$name]?'selected':'' ?> > couleur 3 </option>;
-        <option class="colorSample4" value="var(--color4)" <?= "var(--color4)"==$_GET[$name]?'selected':'' ?> > couleur 4 </option>;
-        <option class="colorSample5" value="var(--color5)" <?= "var(--color5)"==$_GET[$name]?'selected':'' ?> > couleur 5 </option>;
+        <option class="colorSample1" value="var(--c1)" <?= "var(--c1)"==$_GET[$name]?'selected':'' ?> > couleur 1 </option>;
+        <option class="colorSample2" value="var(--c2)" <?= "var(--c2)"==$_GET[$name]?'selected':'' ?> > couleur 2</option>;
+        <option class="colorSample3" value="var(--c3)" <?= "var(--c3)"==$_GET[$name]?'selected':'' ?> > couleur 3 </option>;
+        <option class="colorSample4" value="var(--c4)" <?= "var(--c4)"==$_GET[$name]?'selected':'' ?> > couleur 4 </option>;
+        <option class="colorSample5" value="var(--c5)" <?= "var(--c5)"==$_GET[$name]?'selected':'' ?> > couleur 5 </option>;
     </select>
-
-
-
 
 <?php }
 
@@ -98,4 +97,26 @@ function setRangeInput(string $name, string $label, string $default) : void
 
     <label for="<?= $name ?>"><?=$label?></label>
     <input id="<?= $name ?>" type="range" name="<?= $name ?>" value="<?= $_GET[$name] ?? $default ?>">
+<?php }
+
+function setPictureInput(string $name, string $label, string $default) : void
+{
+    $name="p_".$name;
+
+    if (empty($_GET[$name])) {
+        $_GET[$name]='';
+    }
+
+    if ($dossier = opendir('../public/assets/pictures/')) { ?>
+        <label for="<?= $name ?>"><?=$label?></label>
+        <select STYLE="width:150px" name='<?= $name ?>'>
+            <?php while (false !== ($fichier = readdir($dossier))) {
+                if ($fichier[0]!='.') { ?>
+                    <option value="<?=$fichier?>" <?= $fichier==$_GET[$name]?'selected':'' ?> ><?=$fichier?></option>;
+                <?php }
+            } ?>
+        </select>
+        <?php closedir($dossier);
+    } ?>
+
 <?php }

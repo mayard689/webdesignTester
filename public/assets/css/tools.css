@@ -1,9 +1,9 @@
 :root{
-    --color1:#000000;
-    --color2:#444444;
-    --color3:#888888;
-    --color4:#CCCCCC;
-    --color5:#FFFFFF;
+    --c1:#000000;
+    --c2:#444444;
+    --c3:#888888;
+    --c4:#CCCCCC;
+    --c5:#FFFFFF;
 }
 
 .tools{
@@ -40,23 +40,23 @@ select, option{
 }
 
 .colorSample1{
-    background:var(--color1);
-    color:var(--color1);
+    background:var(--c1);
+    color:var(--c1);
 }
 .colorSample2{
-    background-color:var(--color2);
-    color:var(--color2);
+    background-color:var(--c2);
+    color:var(--c2);
 }
 .colorSample3{
-    background-color:var(--color3);
-    color:var(--color3);
+    background-color:var(--c3);
+    color:var(--c3);
 }
 .colorSample4{
-    background-color:var(--color4);
-    color:var(--color4);
+    background-color:var(--c4);
+    color:var(--c4);
 }
 .colorSample5{
-    background-color:var(--color5);
-    color:var(--color5);
+    background-color:var(--c5);
+    color:var(--c5);
 }
 

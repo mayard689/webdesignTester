@@ -40,6 +40,11 @@ section{
     padding:20px;
     margin:20px;
     align-self: center;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .myDivH3, .myDivImg, .myDivH3{
