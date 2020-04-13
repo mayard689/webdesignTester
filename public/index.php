@@ -40,7 +40,7 @@
 
     <div class="tools">
 
-        <input class="toolBoxActivator" type="checkbox"> Afficher les options graphique. </input>
+        <input class="toolBoxActivator" type="checkbox" checked> Afficher les options graphique. </input>
         <div class="settings toolBox">
 
             <form>

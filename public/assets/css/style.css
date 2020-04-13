@@ -45,6 +45,8 @@ section{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
+    box-shadow: 7px 7px 7px rgba(235, 235, 235, 0.9);
 }
 
 .myDivH3, .myDivImg, .myDivH3{
