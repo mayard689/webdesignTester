@@ -65,14 +65,14 @@
                     <?php chooseColorInput('h2{color:', 'Couleur du titre 2', '#000000') ?>
                     <?php setFontInput('@font-face{font-family:"myH2font";src:', 'Font du titre 2', '') ?>
                     <?php setSizeInput("h2{font-size:", 'Taille du titre 2', '36') ?>
-                    <?php setRangeInput("h2{padding-left:", 'Décalage Horizontal du titre 2', '36') ?>
+                    <?php setRangeInput("h2{padding-left:", 'Décalage Horizontal du titre 2', '0') ?>
                 </div>
 
                 <div class="styleSet">
                     <?php chooseColorInput('h3{color:', 'Couleur du titre 3', '#000000') ?>
                     <?php setFontInput('@font-face{font-family:"myH3font";src:', 'Font du titre 3', '') ?>
                     <?php setSizeInput("h3{font-size:", 'Taille du titre 3', '36') ?>
-                    <?php setRangeInput("h3{padding-left:", 'Décalage Horizontal du titre 3', '36') ?>
+                    <?php setRangeInput("h3{padding-left:", 'Décalage Horizontal du titre 3', '0') ?>
                 </div>
 
                 <div class="styleSet">
@@ -82,14 +82,14 @@
                 </div>
 
                 <div class="styleSet">
-                    <?php setSizeInput("_myDiv{width:", 'Largeur des vignettes', '100') ?>
-                    <?php setSizeInput("_myDiv{height:", 'Hauteur des vignettes', '100') ?>
-                    <?php chooseColorInput('_myDiv{background:', 'Couleur de fond', '#FFFFFF') ?>
+                    <?php setSizeInput("_myDiv{width:", 'Largeur des vignettes', '400') ?>
+                    <?php setSizeInput("_myDiv{height:", 'Hauteur des vignettes', '400') ?>
+                    <?php chooseColorInput('_myDiv{background:', 'Couleur de fond', 'var(--c5)') ?>
                 </div>
 
                 <div class="styleSet">
-                    <?php setSizeInput("_myDivImg{width:", 'Largeur des images', '100') ?>
-                    <?php setSizeInput("_myDivImg{height:", 'Hauteur des images', '100') ?>
+                    <?php setSizeInput("_myDivImg{width:", 'Largeur des images', '200') ?>
+                    <?php setSizeInput("_myDivImg{height:", 'Hauteur des images', '150') ?>
                     <?php setSizeInput("_myDivImg{top:", 'Décalage Vertical des images', '0') ?>
                     <?php setSizeInput("_myDivImg{left:", 'Decalage horizontal des images', '0') ?>
                     <?php setPictureInput('_myDivImg1{background:', 'Image de fond', '') ?>
@@ -107,9 +107,9 @@
                 </div>
 
 
-                <?php chooseColorInput('_content{background-color:', 'Couleur du body', '#FFFFFF') ?>
-                <?php chooseColorInput('_section1{background-color:', 'Couleur de section 1', '#FFFFFF') ?>
-                <?php chooseColorInput('_section2{background-color:', 'Couleur de section 2', '#FFFFFF') ?>
+                <?php chooseColorInput('_content{background-color:', 'Couleur du body', 'var(--c5)') ?>
+                <?php chooseColorInput('_section1{background-color:', 'Couleur de section 1', 'var(--c5)') ?>
+                <?php chooseColorInput('_section2{background-color:', 'Couleur de section 2', 'var(--c5)') ?>
 
                 <label>largeur de section</label>
                 <input type="range" name="r_section{width:" value="<?=$_GET['r_section{width:'] ?? '100' ?>">
@@ -139,7 +139,7 @@
 
         <section class="section1">
             <div class="sectionContent">
-                <h2>Ceci est un titre de niveau 2</h2>
+                <?php include 'h2Title.php'?>
                 <h3>Ceci est un titre de niveau 3</h3>
                 <p>Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 

@@ -35,9 +35,10 @@
 function setColorInput(string $name, string $label, string $default) : void
 {
     $name="__".$name;?>
-
-    <label for="<?= $name ?>"><?=$label?></label>
-    <input id="<?= $name ?>" type="color" name="<?= $name ?>" value="<?= $_GET[$name] ?? $default ?>">
+    <div class="labelInput">
+        <label for="<?= $name ?>"><?=$label?></label>
+        <input id="<?= $name ?>" type="color" name="<?= $name ?>" value="<?= $_GET[$name] ?? $default ?>">
+    </div>
 <?php }
 
 function chooseColorInput(string $name, string $label, string $default) : void
@@ -45,18 +46,19 @@ function chooseColorInput(string $name, string $label, string $default) : void
     $name="__".$name;
 
     if (empty($_GET[$name])) {
-        $_GET[$name]='';
+        $_GET[$name]=$default;
     }?>
 
-    <label for="<?= $name ?>"><?=$label?></label>
-    <select STYLE="width:150px" name='<?= $name ?>'>
-        <option class="colorSample1" value="var(--c1)" <?= "var(--c1)"==$_GET[$name]?'selected':'' ?> > couleur 1 </option>;
-        <option class="colorSample2" value="var(--c2)" <?= "var(--c2)"==$_GET[$name]?'selected':'' ?> > couleur 2</option>;
-        <option class="colorSample3" value="var(--c3)" <?= "var(--c3)"==$_GET[$name]?'selected':'' ?> > couleur 3 </option>;
-        <option class="colorSample4" value="var(--c4)" <?= "var(--c4)"==$_GET[$name]?'selected':'' ?> > couleur 4 </option>;
-        <option class="colorSample5" value="var(--c5)" <?= "var(--c5)"==$_GET[$name]?'selected':'' ?> > couleur 5 </option>;
-    </select>
-
+    <div class="labelInput">
+        <label for="<?= $name ?>"><?=$label?></label>
+        <select STYLE="width:150px" name='<?= $name ?>'>
+            <option class="colorSample1" value="var(--c1)" <?= "var(--c1)"==$_GET[$name]?'selected':'' ?> > couleur 1 </option>;
+            <option class="colorSample2" value="var(--c2)" <?= "var(--c2)"==$_GET[$name]?'selected':'' ?> > couleur 2</option>;
+            <option class="colorSample3" value="var(--c3)" <?= "var(--c3)"==$_GET[$name]?'selected':'' ?> > couleur 3 </option>;
+            <option class="colorSample4" value="var(--c4)" <?= "var(--c4)"==$_GET[$name]?'selected':'' ?> > couleur 4 </option>;
+            <option class="colorSample5" value="var(--c5)" <?= "var(--c5)"==$_GET[$name]?'selected':'' ?> > couleur 5 </option>;
+        </select>
+    </div>
 <?php }
 
 
@@ -69,35 +71,53 @@ function setFontInput(string $name, string $label, string $default) : void
 {
     $name="f_".$name;
 
+    if (empty($_GET[$name])) {
+        $_GET[$name]=$default;
+    }
+
     if ($dossier = opendir('../public/assets/font/')) { ?>
-        <label for="<?= $name ?>"><?=$label?></label>
-        <select STYLE="width:150px" name='<?= $name ?>'>
-            <?php while (false !== ($fichier = readdir($dossier))) {
-                if ($fichier[0]!='.') { ?>
-                    <option value="<?=$fichier?>" <?= $fichier==$_GET[$name]?'selected':'' ?> ><?=$fichier?></option>;
-                <?php }
-            } ?>
-        </select>
+        <div class="labelInput">
+            <label for="<?= $name ?>"><?=$label?></label>
+            <select STYLE="width:150px" name='<?= $name ?>'>
+                <?php while (false !== ($fichier = readdir($dossier))) {
+                    if ($fichier[0]!='.') { ?>
+                        <option value="<?=$fichier?>" <?= $fichier==$_GET[$name]?'selected':'' ?> ><?=$fichier?></option>;
+                    <?php }
+                } ?>
+            </select>
+        </div>
         <?php closedir($dossier);
     } ?>
 
 <?php }
 
+
+
+
 function setSizeInput(string $name, string $label, string $default) : void
 {
     $name="s_".$name;?>
-
-    <label for="<?= $name ?>"><?=$label?></label>
-    <input size="1" id="<?= $name ?>" type="number" name="<?= $name ?>" value="<?= $_GET[$name] ?? $default ?>">
+    <div class="labelInput">
+        <label for="<?= $name ?>"><?=$label?></label>
+        <input size="1" id="<?= $name ?>" type="number" name="<?= $name ?>" value="<?= $_GET[$name] ?? $default ?>">
+    </div>
 <?php }
+
+
+
 
 function setRangeInput(string $name, string $label, string $default) : void
 {
     $name="r_".$name;?>
-
-    <label for="<?= $name ?>"><?=$label?></label>
-    <input id="<?= $name ?>" type="range" name="<?= $name ?>" value="<?= $_GET[$name] ?? $default ?>">
+    <div class="labelInput">
+        <label for="<?= $name ?>"><?=$label?></label>
+        <input id="<?= $name ?>" type="range" name="<?= $name ?>" value="<?= $_GET[$name] ?? $default ?>">
+    </div>
 <?php }
+
+
+
+
 
 function setPictureInput(string $name, string $label, string $default) : void
 {
@@ -108,14 +128,16 @@ function setPictureInput(string $name, string $label, string $default) : void
     }
 
     if ($dossier = opendir('../public/assets/pictures/')) { ?>
-        <label for="<?= $name ?>"><?=$label?></label>
-        <select STYLE="width:150px" name='<?= $name ?>'>
-            <?php while (false !== ($fichier = readdir($dossier))) {
-                if ($fichier[0]!='.') { ?>
-                    <option value="<?=$fichier?>" <?= $fichier==$_GET[$name]?'selected':'' ?> ><?=$fichier?></option>;
-                <?php }
-            } ?>
-        </select>
+        <div class="labelInput">
+            <label for="<?= $name ?>"><?=$label?></label>
+            <select STYLE="width:150px" name='<?= $name ?>'>
+                <?php while (false !== ($fichier = readdir($dossier))) {
+                    if ($fichier[0]!='.') { ?>
+                        <option value="<?=$fichier?>" <?= $fichier==$_GET[$name]?'selected':'' ?> ><?=$fichier?></option>;
+                    <?php }
+                } ?>
+            </select>
+        </div>
         <?php closedir($dossier);
     } ?>
 
