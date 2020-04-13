@@ -131,6 +131,17 @@
 
     </div>
 
+    <form>
+
+    <div class="palette">
+        <?php setColorInput(':root{--c1:', 'Couleur 1', '#000000') ?>
+        <?php setColorInput(':root{--c2:', 'Couleur 2', '#444444') ?>
+        <?php setColorInput(':root{--c3:', 'Couleur 3', '#888888') ?>
+        <?php setColorInput(':root{--c4:', 'Couleur 4', '#CCCCCC') ?>
+        <?php setColorInput(':root{--c5:', 'Couleur 5', '#FFFFFF') ?>
+
+        <input type="submit" value="Validerla palette">
+    </div>
 
     <div class="content" >
 
@@ -183,6 +194,7 @@
 
     </div>
 
+    <form>
 
 
 </body>
