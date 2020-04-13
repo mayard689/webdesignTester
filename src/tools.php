@@ -49,7 +49,7 @@ function setFontInput(string $name, string $label, string $default) : void
 
     if ($dossier = opendir('../public/assets/font/')) { ?>
         <label for="<?= $name ?>"><?=$label?></label>
-        <select name='<?= $name ?>'>
+        <select STYLE="width:150px" name='<?= $name ?>'>
             <?php while (false !== ($fichier = readdir($dossier))) {
                 if ($fichier[0]!='.') { ?>
                     <option value="<?=$fichier?>" <?= $fichier==$_GET[$name]?'selected':'' ?> ><?=$fichier?></option>;
@@ -66,7 +66,7 @@ function setSizeInput(string $name, string $label, string $default) : void
     $name="s_".$name;?>
 
     <label for="<?= $name ?>"><?=$label?></label>
-    <input id="<?= $name ?>" type="number" name="<?= $name ?>" value="<?= $_GET[$name] ?? $default ?>">
+    <input size="1" id="<?= $name ?>" type="number" name="<?= $name ?>" value="<?= $_GET[$name] ?? $default ?>">
 <?php }
 
 function setRangeInput(string $name, string $label, string $default) : void
