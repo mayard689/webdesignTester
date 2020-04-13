@@ -66,7 +66,12 @@
                 <?php setFontInput('@font-face{font-family:"myPfont";src:', 'Font du paragraphe', '') ?>
                 <?php setSizeInput("p{font-size:", 'Taille du paragraphe', '16') ?>
             </div>
-            
+
+            <div class="styleSet">
+                <?php setSizeInput("_myDiv{width:", 'Largeur des vignettes', '100') ?>
+                <?php setSizeInput("_myDiv{height:", 'Hauteur des vignettes', '100') ?>
+            </div>
+
             <label>Couleur du body</label>
             <input type="color" name="___content{background-color:" value="<?=$_GET['___content{background-color:']??'#FFFFFF' ?>">
 
@@ -103,7 +108,7 @@
                 <h3>Ceci est un titre de niveau 3</h3>
                 <p>Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-                <div class="mydiv">
+                <div class="myDiv">
                     <h3>Ceci est un titre de niveau 3</h3>
                     <p>Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
@@ -116,7 +121,7 @@
                 <h3>Ceci est un titre de niveau 3</h3>
                 <p>Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-                <div class="mydiv">
+                <div class="myDiv">
                     <h3>Ceci est un titre de niveau 3</h3>
                     <p>Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
