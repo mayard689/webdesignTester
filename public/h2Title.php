@@ -9,7 +9,7 @@
     <div class="formStyleSet">
         <?php chooseColorInput('h2{color:', 'Couleur du titre 2', '#000000') ?>
         <?php setFontInput('@font-face{font-family:"myH2font";src:', 'Font du titre 2', '') ?>
-        <?php setSizeInput("h2{font-size:", 'Taille du titre 2', '36') ?>
+        <?php setSizeInput("h2{font-size:", 'Taille du titre 2', '72') ?>
         <?php setRangeInput("h2{padding-left:", 'Décalage Horizontal du titre 2', '0') ?>
         <input type="submit" value="Ok">
     </div>
