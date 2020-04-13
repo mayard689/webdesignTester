@@ -1,7 +1,7 @@
 
 
 <div class="settingBlock">
-    <p class="myDivP">Ceci est un paragraphe. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h3 class="myDivH3">Ceci est un titre de niveau 3</h3>
 
     <label for="h2Activator">modifier</label>
     <input id="h2Activator" type="checkbox" class="styleSetActivator" type="checkbox" >
@@ -12,13 +12,14 @@
 
         <div style="display:none"><?php include 'globalForm.php' ?></div>
         <p>Propriétés valables sur toute la page :</p>
-        <?php chooseColorInput('p{color:', 'Couleur du paragraphe', '#000000') ?>
-        <?php setFontInput('@font-face{font-family:"myPfont";src:', 'Font du paragraphe', '') ?>
-        <?php setSizeInput("p{font-size:", 'Taille du paragraphe', '16') ?>
+        <?php chooseColorInput('h3{color:', 'Couleur du titre 3', '#000000') ?>
+        <?php setFontInput('@font-face{font-family:"myH3font";src:', 'Font du titre 3', '') ?>
+        <?php setSizeInput("h3{font-size:", 'Taille du titre 3', '36') ?>
+        <?php setRangeInput("h3{padding-left:", 'Décalage Horizontal du titre 3', '0') ?>
         <br>
         <p>Propriétés valables seulement dans la vignette :</p>
-        <?php setSizeInput("_myDivP{top:", 'Décalage Vertical des paragraphes', '0') ?>
-        <?php setSizeInput("_myDivP{left:", 'Decalage horizontal des paragraphes', '0') ?>
+        <?php setSizeInput("_myDivH3{top:", 'Décalage Vertical des titres', '0') ?>
+        <?php setSizeInput("_myDivH3{left:", 'Decalage horizontal des titres', '0') ?>
         <br>
         <input type="submit" value="Ok">
 
