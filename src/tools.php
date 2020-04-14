@@ -98,7 +98,7 @@ function setSizeInput(string $name, string $label, string $default) : void
 {
     $name="s_".$name;?>
     <div class="labelInput">
-        <label for="<?= $name ?>"><?=$label?></label>
+        <label for="<?= $name ?>"><?=$label.' (px)'?></label>
         <input size="1" id="<?= $name ?>" type="number" name="<?= $name ?>" value="<?= $_GET[$name] ?? $default ?>">
     </div>
 <?php }
@@ -110,8 +110,8 @@ function setRangeInput(string $name, string $label, string $default) : void
 {
     $name="r_".$name;?>
     <div class="labelInput">
-        <label for="<?= $name ?>"><?=$label?></label>
-        <input id="<?= $name ?>" type="range" name="<?= $name ?>" value="<?= $_GET[$name] ?? $default ?>">
+        <label for="<?= $name ?>"><?=$label.' (%)'?></label>
+        <input id="<?= $name ?>" type="number" name="<?= $name ?>" value="<?= $_GET[$name] ?? $default ?>">
     </div>
 <?php }
 
