@@ -3,7 +3,7 @@
 <div class="settingBlock">
 
     <div class="myDiv">
-        <h3 class="myDivH3">Ceci est un titre de niveau 3</h3>
+        <?php include 'divH3title.php' ?>
         <?php include 'divPparagraph.php' ?>
         <?php include 'imgImage1.php' ?>
     </div>
