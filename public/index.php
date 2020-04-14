@@ -1,5 +1,3 @@
-
-
 <?php
 
     require "../src/tools.php";
