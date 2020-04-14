@@ -1,6 +1,6 @@
 
 
-<div class="settingBlock">
+<div class="h2b settingBlock">
     <h2>Ceci est un titre de niveau 2</h2>
 
         <label for="h2Activator">modifier</label>
@@ -15,7 +15,7 @@
         <?php chooseColorInput('h2{color:', 'Couleur du titre 2', '#000000') ?>
         <?php setFontInput('@font-face{font-family:"myH2font";src:', 'Font du titre 2', '') ?>
         <?php setSizeInput("h2{font-size:", 'Taille du titre 2', '72') ?>
-        <?php setRangeInput("h2{padding-left:", 'Décalage Horizontal du titre 2', '0') ?>
+        <?php setRangeInput("_h2b{left:", 'Décalage Horizontal du titre 2', '0') ?>
         <input type="submit" value="Ok">
 
         </form>

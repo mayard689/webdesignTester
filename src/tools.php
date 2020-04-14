@@ -77,7 +77,7 @@ function setFontInput(string $name, string $label, string $default) : void
 
     if ($dossier = opendir('../public/assets/font/')) { ?>
         <div class="labelInput">
-            <label for="<?= $name ?>"><?=$label?></label>
+            <label for='<?= $name ?>'><?=$label?></label>
             <select STYLE="width:150px" name='<?= $name ?>'>
                 <?php while (false !== ($fichier = readdir($dossier))) {
                     if ($fichier[0]!='.') { ?>

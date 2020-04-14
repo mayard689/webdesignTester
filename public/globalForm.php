@@ -17,20 +17,21 @@
                     <?php chooseColorInput('h1{color:', 'Couleur du titre 1', '#000000') ?>
                     <?php setFontInput('@font-face{font-family:"myH1font";src:', 'Font du titre 1', '') ?>
                     <?php setSizeInput("h1{font-size:", 'Taille du titre 1', '140') ?>
+                    <?php setRangeInput("_h1b{left:", 'Décalage Horizontal du titre 1', '0') ?>
                 </div>
 
                 <div class="styleSet">
                     <?php chooseColorInput('h2{color:', 'Couleur du titre 2', '#000000') ?>
                     <?php setFontInput('@font-face{font-family:"myH2font";src:', 'Font du titre 2', '') ?>
                     <?php setSizeInput("h2{font-size:", 'Taille du titre 2', '72') ?>
-                    <?php setRangeInput("h2{padding-left:", 'Décalage Horizontal du titre 2', '0') ?>
+                    <?php setRangeInput("_h2b{left:", 'Décalage Horizontal du titre 2', '0') ?>
                 </div>
 
                 <div class="styleSet">
                     <?php chooseColorInput('h3{color:', 'Couleur du titre 3', '#000000') ?>
                     <?php setFontInput('@font-face{font-family:"myH3font";src:', 'Font du titre 3', '') ?>
                     <?php setSizeInput("h3{font-size:", 'Taille du titre 3', '36') ?>
-                    <?php setRangeInput("h3{padding-left:", 'Décalage Horizontal du titre 3', '0') ?>
+                    <?php setRangeInput("_h3b{left:", 'Décalage Horizontal du titre 3', '0') ?>
                 </div>
 
                 <div class="styleSet">

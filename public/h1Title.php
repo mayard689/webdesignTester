@@ -1,6 +1,6 @@
 
 
-<div class="settingBlock">
+<div class="h1b settingBlock">
     <h1>CECI EST UN TITRE DE NIVEAU 1</h1>
 
         <label for="h2Activator">modifier</label>
@@ -15,7 +15,7 @@
         <?php chooseColorInput('h1{color:', 'Couleur du titre 1', '#000000') ?>
         <?php setFontInput('@font-face{font-family:"myH1font";src:', 'Font du titre 1', '') ?>
         <?php setSizeInput("h1{font-size:", 'Taille du titre 1', '140') ?>
-        <?php setRangeInput("h1{left:", 'Décalage Horizontal du titre 1', '0') ?>
+        <?php setRangeInput("_h1b{left:", 'Décalage Horizontal du titre 1', '0') ?>
         <input type="submit" value="Ok">
 
         </form>

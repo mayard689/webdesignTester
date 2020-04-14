@@ -25,9 +25,11 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
+
     <title> My Design tester </title>
-    <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/tools.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
     <style type="text/css">
         <?php echo printCss()?>
     </style>
